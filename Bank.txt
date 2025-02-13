@@ -1,0 +1,41 @@
+public class Bank {
+    public class BankAccount
+    {
+
+        String accountNumber;
+        String accountHolder;
+        long balance;
+        String accountType;
+
+
+        void deposit(long money){
+        this.balance+=money;
+
+        }
+        void withdraw(long money){
+
+        if(this.balance>=money) this.balance-=money;
+        else{
+            System.out.println("You can only withdraw money less than or eqal balance");
+        }
+        }
+ public   BankAccount(String accountNumber,String accountHolder,long balance,String accountType){
+this.balance=balance;
+this.accountNumber=accountNumber;
+this.accountHolder=accountHolder;
+this.accountType=accountType;
+
+
+
+}
+
+    }
+    public static void main(String[] args) {
+        BankAccount A =new BankAccount("1234","Omor",2500,"Savings");
+
+        deposit(2000);
+        withdraw(5000);
+
+   }
+}
+
